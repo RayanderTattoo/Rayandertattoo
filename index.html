@@ -9,95 +9,115 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
+    /* Reset básico */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #0a1f44, #3fa9f5);
-      color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      min-height: 100vh;
+      color: #fff;
     }
 
     .container {
       width: 100%;
-      max-width: 420px;
+      max-width: 450px;
       padding: 20px;
+      text-align: center;
     }
 
     .title {
-      text-align: center;
-      font-size: 26px;
+      font-size: 28px;
       font-weight: bold;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .link {
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .btn {
       display: flex;
       align-items: center;
       gap: 15px;
-      text-decoration: none;
-      background: rgba(0, 0, 0, 0.35);
-      color: #fff;
-      padding: 15px;
+      padding: 16px;
       border-radius: 14px;
-      margin-bottom: 15px;
       font-size: 18px;
-      transition: transform 0.2s, background 0.2s;
-      backdrop-filter: blur(4px);
+      text-decoration: none;
+      color: #fff;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+      justify-content: center;
+      font-weight: 500;
     }
 
-    .link i {
+    /* Ícones dentro do botão */
+    .btn i {
       font-size: 26px;
       width: 30px;
       text-align: center;
     }
 
-    .link:hover {
-      background: rgba(0, 0, 0, 0.55);
-      transform: scale(1.04);
+    /* Hover animado */
+    .btn:hover {
+      transform: scale(1.05) translateY(-3px);
+      background: rgba(0,0,0,0.55);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     }
 
     /* Cores dos ícones */
     .instagram i { color: #E1306C; }
     .whatsapp i { color: #25D366; }
-    .tiktok i { color: #ffffff; }
+    .tiktok i { color: #fff; }
     .pix i { color: #32BCAD; }
-    .shopee i { color: #ff5722; }
+    .shopee i { color: #FF5722; }
+
+    /* Responsividade */
+    @media (max-width: 500px) {
+      .btn { font-size: 16px; padding: 14px; }
+      .title { font-size: 24px; }
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
-
     <div class="title">Rayander Tattoo Studio</div>
 
-    <a class="link instagram" href="https://www.instagram.com/rayandertattoo" target="_blank">
-      <i class="fa-brands fa-instagram"></i>
-      <span>Instagram</span>
-    </a>
+    <div class="buttons">
+      <a class="btn instagram" href="https://www.instagram.com/rayandertattoo" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+        Instagram
+      </a>
 
-    <a class="link tiktok" href="https://www.tiktok.com/@rayanderlopes1" target="_blank">
-      <i class="fa-brands fa-tiktok"></i>
-      <span>TikTok</span>
-    </a>
+      <a class="btn tiktok" href="https://www.tiktok.com/@rayanderlopes1" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+        TikTok
+      </a>
 
-    <a class="link whatsapp" href="https://wa.me/558499137841" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i>
-      <span>WhatsApp</span>
-    </a>
+      <a class="btn whatsapp" href="https://wa.me/558499137841" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+        WhatsApp
+      </a>
 
-    <a class="link shopee" href="https://br.shp.ee/wewz35W" target="_blank">
-      <i class="fa-solid fa-bag-shopping"></i>
-      <span>Shopee</span>
-    </a>
+      <a class="btn shopee" href="https://br.shp.ee/wewz35W" target="_blank">
+        <i class="fa-solid fa-bag-shopping"></i>
+        Shopee
+      </a>
 
-    <a class="link pix" href="javascript:navigator.clipboard.writeText('6b687648-6a32-4acd-9925-0f9bbc0dda20'); alert('Chave Pix copiada!');">
-      <i class="fa-solid fa-qrcode"></i>
-      <span>Pix (copiar chave)</span>
-    </a>
-
+      <a class="btn pix" href="javascript:navigator.clipboard.writeText('6b687648-6a32-4acd-9925-0f9bbc0dda20'); alert('Chave Pix copiada!');">
+        <i class="fa-solid fa-qrcode"></i>
+        Pix (copiar chave)
+      </a>
+    </div>
   </div>
 </body>
 </html>
